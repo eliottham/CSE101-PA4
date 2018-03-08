@@ -7,7 +7,7 @@
 #define __TENNIS_HPP__
 
 #include <vector>
-
+#include <algorithm>
 #include "Interval.hpp"
 
 int tennis(std::vector<Interval> lessons);
