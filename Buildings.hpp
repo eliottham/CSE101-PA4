@@ -7,6 +7,9 @@
 #define __BUILDINGS_HPP__
 
 #include "TwoD_Array.hpp"
+#include <queue>
+#include <utility>
+using namespace std;
 
 int buildings(TwoD_Array<int> survey);
 

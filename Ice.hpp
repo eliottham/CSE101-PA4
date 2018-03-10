@@ -7,6 +7,8 @@
 #define __ICE_HPP__
 
 #include "TwoD_Array.hpp"
+#include <utility>
+using namespace std;
 
 #define MAX(x, y) (((x) > (y)) ? (x) : (y))
 #define MIN(x, y) (((x) < (y)) ? (x) : (y))
