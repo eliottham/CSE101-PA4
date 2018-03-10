@@ -1,0 +1,89 @@
+This was the final programming assignment for my algorithms class, CSE101 at UCSD.
+The purpose of this lab was to give a set of questions similar to what we might see
+in a coding interview. Listed below are the prompts for each of the problems.
+
+1. Factory Serial Numbers
+   
+   Input: A sorted list of consecutively increasing factory serial numbers (integers)
+          in increasing order, with one and only one​ serial number printed multiple times.
+
+   Output: The serial number that is misprinted, i.e., that occurs multiple times.
+
+   You are an inspector on a toy factory line, and your job is to make sure that each 
+   toy produced has a different serial number. The machine that stamps serial numbers
+   onto toys gives a unique serial number to each toy by stamping consecutively increasing
+   values (1102, 1103, 1104, 1105, etc.). Unfortunately the serial stamping machine malfunctions,
+   and stamps the same serial number onto an unknown number of toys before returning to its
+   normal function and continuing stamping consecutive numbers. You do not realize this
+   mistake until you stop the machinemuch later. An example list of misprinted serials might be
+   (1102, 1103, 1103, 1103, 1103, 1104, 1105). Given the list of toy serial numbers produced
+   your goal is to find the single ​serial number that has been misprinted multiple times.
+   Note that one and only one​ serial number will be misprinted multiple times.
+
+2. Tennis Lessons
+
+   Input: A list of lesson time Intervals, each with a start and an end time.
+
+   Output: The minimum number of tennis courts required to host all the lessons.
+
+   You are a supervisor for a tennis facility and have a list of tennis lesson intervals that
+   have been booked at your facility. A tennis lesson interval for this problem is defined
+   as an instance of the Interval ​class, defined in Interval.hpp​. The Interval​ class contains
+   an integer start​ and an integer end​, which represent the start time of the lesson and the
+   end time of the lesson respectively. Your goal is to determine the minimum number of courts
+   you need to set aside for all the lessons booked. Although you do not need to determine the
+   specific assignment of lessons to courts, all lessons must follow these constraints:
+		- Every lesson needs to have a court that it can be completed at
+		- A lesson must start and end at the same court
+		- A lesson cannot start in a court until the previous lesson at
+		  that court has ended.
+		- As soon as a lesson has ended, a new one can immediately start​.
+  This means that two lessons with intervals [1,3) and [3,4) can be scheduled on the same court.
+  You are not guaranteed any specific ordering for the list of Intervals given to you.
+
+3. Number of Buildings in a City
+
+   Input: M x N image of a city represented using a matrix of 1’s
+          and 0’s.
+
+   Output: The number of buildings in the grid.
+
+   You are a building surveyor, and have been given a satellite image of a city. This image is
+   represented by a grid of 1’s and 0’s, where a 0 represents a street or sidewalk, and a group 
+   of contiguous 1’s represents a building. A contiguous group of 1’s is defined as a group of 1’s
+   such that each 1 is adjacent​ to at least one other 1 in any direction, except diagonally​.
+   
+   For example, in the following grid, there are 3 different buildings present:
+		1 1​ 0 1​ 0
+		0 1​ 0 0 1
+		1 1​ 0 1 1
+   Your goal is to determine the number of buildings present in the image. Note that you are free
+   to change the values in the TwoD_Array given to you.
+
+4. Delivering Ice
+
+   Input: M x N matrix of temperatures for rooms in a warehouse.
+
+   Output: Minimum amount of ice needed to start with in the top left corner
+           to make it to the bottom right with at least one unit of ice left.
+
+   You are a worker in an ice packing warehouse, and need to deliver some ice to your boss.
+   The warehouse is made up of M x N rooms, laid out in a 2-d grid. You start with an
+   initial amount of ice, K​, then enter the top left room​. Unfortunately, the thermostat in
+   the warehouse has malfunctioned and caused the temperatures in the different rooms to
+   vary wildly.
+		
+		- If a room’s temperature is negative, it causes your ice to grow
+		  by the same amount. (If you enter a room with a temperature of
+		  -2, you will now have K+2 units of ice)
+		- If a room’s temperature is positive, it causes your ice to
+		  shrink by the same amount. (If you enter a room with a
+		  temperature of 5, you will now have size K-5 units of ice)
+		- If a room’s temperature is 0, the amount of ice you have will
+		  not change.
+		- If your ice block melts entirely (reaches 0) you fail and
+		  cannot create more ice by entering a room with a negative temperature.
+
+   Your goal is to reach your boss’s room, which is accessible only through the final bottom
+   right room, ​with at least one unit of ice left. In order to reach your boss’s room as quickly
+   as possible, you decide to move only downward or rightward.
